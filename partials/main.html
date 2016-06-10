@@ -1,0 +1,7 @@
+<div ng-repeat="title in tracks">
+  <div>
+    <button 
+      ng-click="viewTrack(track.TrackId)">{{ track.Title }}</button>
+    {{ track.AlbumName }}
+  </div>
+</div>
