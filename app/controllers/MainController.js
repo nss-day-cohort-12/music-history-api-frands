@@ -10,9 +10,15 @@ Frands.controller('MainController', [
 
     $scope.tracks = [];
 
+    let userId = authFactory.getUser().ListenerId;
+
     $http
-      .get('http://localhost:5000/api/Track')
+      .get(`http://localhost:5000/api/Track/?TrackId=${userId}`)
       .success(inv => $scope.tracks = inv);
+
+    // $http
+    //   .get('http://localhost:5000/api/Track')
+    //   .success(inv => $scope.tracks = inv);
 
     // $scope.viewTrack = function (id) {
     //   $http({
