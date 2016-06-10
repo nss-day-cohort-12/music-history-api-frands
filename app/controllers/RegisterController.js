@@ -8,10 +8,10 @@ Frands.controller('RegisterController', [
   function ($http, $scope, authFactory) {
 
     $scope.githubOauth = function () {
-      OAuth.initialize('pQOfs7xU3oz0aLT9ocjaVSLpTHY');
-
-      OAuth.popup('github').done(function(result) {
+      OAuth.initialize('0q22Yq9s7BSXjyePVWWKeglIq6M')
+      OAuth.popup('twitter').done(function(result) {
           console.log(result)
+    // do some stuff with result
 
         result.me().done(function(data) {
             // do something with `data`, e.g. print data.name

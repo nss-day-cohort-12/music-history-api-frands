@@ -11,7 +11,7 @@ function () {
       return currentUser;
     },
     setUser (user) {
-      currentUser = user;
+      currentUser = listener;
     }
   }
 }
