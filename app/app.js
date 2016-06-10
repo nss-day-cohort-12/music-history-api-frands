@@ -12,8 +12,8 @@ Frands.config(['$routeProvider',
       controller: 'MainController'
     })
     .when('/create', {
-      templateUrl: 'partials/newTrack.html',
-      controller: 'NewTrackController'
+      templateUrl: 'partials/viewTrack.html',
+      controller: 'ViewTrackController'
     })
     .when('/register', {
       templateUrl: 'partials/register.html',
