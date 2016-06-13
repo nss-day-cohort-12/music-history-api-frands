@@ -32,6 +32,7 @@ namespace Frands
             // Add framework services.
             var connection = @"Server=(localdb)\mssqllocaldb;Database=Frands;Trusted_Connection=True;";
             services.AddDbContext<FrandsDbContext>(options => options.UseSqlServer(connection));
+            services.AddCors();
             services.AddMvc();
         }
 
@@ -40,7 +41,10 @@ namespace Frands
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            app.UseCors(builder =>
+                builder.WithOrigins("http://localhost8080")
+           .AllowAnyHeader()
+           );
             app.UseMvc();
         }
     }

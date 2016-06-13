@@ -203,6 +203,8 @@
 "C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Migrations\20160610182055_MySecondMigration.Designer.cs"
 "C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Migrations\20160610200453_AddedListenerTable.cs"
 "C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Migrations\20160610200453_AddedListenerTable.Designer.cs"
+"C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Migrations\20160610202330_addedId2Track.cs"
+"C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Migrations\20160610202330_addedId2Track.Designer.cs"
 "C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Migrations\FrandsDbContextModelSnapshot.cs"
 "C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Models\Album.cs"
 "C:\Users\Mark\Documents\Visual Studio 2015\Projects\groupProjects\Frands\music-history-api-frands\src\Frands\Models\FrandsDbContext.cs"
