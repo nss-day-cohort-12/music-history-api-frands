@@ -7,6 +7,7 @@ namespace Frands.Models
 {
     public class Album
     {
+        
         public int AlbumId { get; set; }
        public string  AlbumName {get;set;}
         public string Artist { get; set; }

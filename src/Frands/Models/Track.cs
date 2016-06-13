@@ -12,6 +12,7 @@ namespace Frands.Models
         public int AlbumId { get; set; }
         public string Artist { get; set; }
         public string TracksHref { get; set; }
+        public int ListenerId { get; set; }
 
 
     }
