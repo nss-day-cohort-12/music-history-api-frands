@@ -3,7 +3,7 @@
 Frands.controller('MainController', [
   '$http', 
   '$scope',
-  'authFactory',
+  'AuthFactory',
 
   function ($http, $scope, authFactory) {
 
