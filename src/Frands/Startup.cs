@@ -32,8 +32,15 @@ namespace Frands
             // Add framework services.
             var connection = @"Server=(localdb)\mssqllocaldb;Database=Frands;Trusted_Connection=True;";
             services.AddDbContext<FrandsDbContext>(options => options.UseSqlServer(connection));
-            services.AddCors();
             services.AddMvc();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowDevelopmentEnvironment",
+                    builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -26,7 +26,7 @@ namespace Frands.Controllers
 
         // GET: api/values
         [HttpGet]
-        public IActionResult Get([FromQuery] int TrackId)
+        public IActionResult Get([FromQuery] int TrackId, [FromQuery] int ListenerId)
         {
             if (!ModelState.IsValid)
             {

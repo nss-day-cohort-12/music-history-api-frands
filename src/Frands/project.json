@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "Microsoft.AspNet.Cors": "6.0.0-rc1-final",
     "Microsoft.NETCore.App": {
       "version": "1.0.0-rc2-3002702",
       "type": "platform"
