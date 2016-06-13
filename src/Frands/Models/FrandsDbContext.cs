@@ -9,6 +9,8 @@ namespace Frands.Models
 
         public DbSet<Album> Album { get; set; }
         public DbSet<Track> Track { get; set; }
+        public DbSet<Listener> Listener { get; set; }
+
        
     }
 

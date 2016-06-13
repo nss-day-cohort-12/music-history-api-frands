@@ -7,7 +7,7 @@ let Frands = angular.module('Frands', [
 Frands.config(['$routeProvider', 
   function ($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/main', {
       templateUrl: 'partials/main.html',
       controller: 'MainController'
     })
@@ -19,6 +19,6 @@ Frands.config(['$routeProvider',
       templateUrl: 'partials/register.html',
       controller: 'RegisterController'
     })
-    .otherwise('/');
+    .otherwise('/register');
   }
 ]);
