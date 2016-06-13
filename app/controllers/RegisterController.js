@@ -7,7 +7,7 @@ Frands.controller('RegisterController', [
 
   function ($http, $scope, authFactory) {
 
-    $scope.githubOauth = function () {
+    $scope.twitterOauth = function () {
       OAuth.initialize('0q22Yq9s7BSXjyePVWWKeglIq6M')
       OAuth.popup('twitter').done(function(result) {
           console.log(result)
@@ -21,8 +21,8 @@ Frands.controller('RegisterController', [
               url: "http://localhost:5000/api/Listener",
               method: "POST",
               data: JSON.stringify({
-                username: data.alias,
-                emailAddress: data.email
+                UserName: data.alias,
+                EmailAddress: data.email
               })
             }).then(
             response => {
