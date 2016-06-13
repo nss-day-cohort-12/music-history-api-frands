@@ -8,9 +8,10 @@ using Frands.Models;
 namespace Frands.Migrations
 {
     [DbContext(typeof(FrandsDbContext))]
-    partial class FrandsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160613153611_SecondTry")]
+    partial class SecondTry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
@@ -32,20 +33,6 @@ namespace Frands.Migrations
                     b.HasKey("AlbumId");
 
                     b.ToTable("Album");
-                });
-
-            modelBuilder.Entity("Frands.Models.Listener", b =>
-                {
-                    b.Property<int>("ListenerId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("EmailAddress");
-
-                    b.Property<string>("UserName");
-
-                    b.HasKey("ListenerId");
-
-                    b.ToTable("Listener");
                 });
 
             modelBuilder.Entity("Frands.Models.Track", b =>

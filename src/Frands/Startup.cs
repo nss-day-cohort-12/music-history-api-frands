@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Frands.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Frands
 {
@@ -32,8 +33,16 @@ namespace Frands
             // Add framework services.
             var connection = @"Server=(localdb)\mssqllocaldb;Database=Frands;Trusted_Connection=True;";
             services.AddDbContext<FrandsDbContext>(options => options.UseSqlServer(connection));
-            services.AddCors();
             services.AddMvc();
+            // Allow any header and any method on a request from my local development machine
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowDevelopmentEnvironment",
+                    builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +55,8 @@ namespace Frands
            .AllowAnyHeader()
            );
             app.UseMvc();
+
+
         }
     }
 }

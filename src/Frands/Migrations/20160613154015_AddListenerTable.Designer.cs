@@ -8,9 +8,10 @@ using Frands.Models;
 namespace Frands.Migrations
 {
     [DbContext(typeof(FrandsDbContext))]
-    partial class FrandsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160613154015_AddListenerTable")]
+    partial class AddListenerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
