@@ -14,7 +14,7 @@ Frands.controller('MainController', [
     let userId = authFactory.getUser().ListenerId;
 
     $http
-      .get(`http://localhost:5000/api/Track/?TrackId=${userId}`)
+      .get(`http://localhost:5000/api/Track/?ListenerId=${userId}`)
       .success(inv => $scope.tracks = inv);
 
     // $http
